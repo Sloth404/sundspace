@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {},
+  "files": [],
+  "include": [],
+  "typeRoots": ["./node_modules/@types", "./src/types"],
+  "references": [
+    {
+      "path": "./tsconfig.lib.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ],
+  "extends": "./tsconfig.base.json"
+}

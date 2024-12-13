@@ -1,0 +1,194 @@
+[
+  {
+    "id": 1,
+    "name": "Martin Kluge",
+    "role": "Erster Vorsitzender",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "martin-kluge.jpg",
+    "description": "Alice is a frontend expert specializing in Vue.js and modern JavaScript frameworks."
+  },
+  {
+    "id": 2,
+    "name": "Yaron Klotz",
+    "role": "Zweiter Vorsitzender",
+    "tags": ["Maschinenbau", "Master"],
+    "image": "yaron-klotz.jpg",
+    "description": "Bob is our backend wizard with a focus on Node.js and scalable server solutions."
+  },
+  {
+    "id": 3,
+    "name": "Kyra Berry",
+    "role": "Schatzmeisterin",
+    "tags": ["Med. Informationsmanagment", "Bachelor"],
+    "image": "kyra-berry.jpg",
+    "description": "Carla designs intuitive and user-friendly interfaces, ensuring a great user experience."
+  },
+  {
+    "id": 4,
+    "name": "Jonas Reichert",
+    "role": "Vorsitzender",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "jonas-reichert.jpg",
+    "description": "David leads our projects, managing timelines and ensuring smooth execution using Scrum methodologies."
+  },
+  {
+    "id": 5,
+    "name": "Patrick Strouhal",
+    "role": "Abteilungsleiter",
+    "tags": ["IT-Sicherheit u. Mobile Systeme", "Bachelor"],
+    "image": "patrick-strouhal.jpg",
+    "description": "Eva analyzes data and builds predictive models to help us make data-driven decisions."
+  },
+  {
+    "id": 6,
+    "name": "Heiner Liesegang",
+    "role": "Abteilungsleiter",
+    "tags": ["IT-Sicherheit u. Mobile Systeme"],
+    "image": "heiner-lisegang.jpg",
+    "description": "Frank ensures our development and production environments are stable and scalable using cloud technologies."
+  },
+  {
+    "id": 7,
+    "name": "Elias Klotz",
+    "role": "Abteilungsmitglied",
+    "tags": ["Elektrotechnik", "Bachelor"],
+    "image": "elias-klotz.jpg",
+    "description": "Gina works on both the frontend and backend, providing versatile solutions across our tech stack."
+  },
+  {
+    "id": 8,
+    "name": "Manuel Neumann",
+    "role": "Abteilungsmitglied",
+    "tags": ["Regenerative Energien", "Bachelor"],
+    "image": "manuel-neumann.jpg",
+    "description": "Hans translates business requirements into technical solutions, ensuring our products meet market needs."
+  },
+  {
+    "id": 9,
+    "name": "Christoph Kolrep",
+    "role": "Abteilungsmitglied",
+    "tags": ["Informatik", "Master"],
+    "image": "christoph-kolrep.jpg",
+    "description": "Ingrid develops marketing strategies and optimizes our online presence to drive user engagement."
+  },
+  {
+    "id": 10,
+    "name": "Benjamin Karch",
+    "role": "Abteilungsmitglied",
+    "tags": ["Elektrotechnik", "Bachelor"],
+    "image": "",
+    "description": "Jürgen designs the software architecture, ensuring scalable and maintainable solutions."
+  },
+  {
+    "id": 11,
+    "name": "Nils Bergmann",
+    "role": "Abteilungsmitglied",
+    "tags": ["Elektrotechnik", "Master"],
+    "image": "",
+    "description": "Klara analyzes and improves system performance, focusing on efficiency and reliability."
+  },
+  {
+    "id": 12,
+    "name": "Jendrick Schmitt",
+    "role": "Abteilungsleiter",
+    "tags": ["Maschinenbau", "Master"],
+    "image": "jendrick-schmitt.jpg",
+    "description": "Lukas ensures the security of our applications and data, implementing best practices for compliance and protection."
+  },
+  {
+    "id": 13,
+    "name": "Tom Gerlach",
+    "role": "Abteilungsleiter",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "tom-gerlach.jpg",
+    "description": "Maria creates and maintains technical documentation, helping users and developers understand our products."
+  },
+  {
+    "id": 14,
+    "name": "Niklas Wirsing",
+    "role": "Abteilungsmitglied",
+    "tags": [],
+    "image": "niklas-wirsing.jpg",
+    "description": "Nico tests our software to identify and resolve issues, ensuring high quality and reliability."
+  },
+  {
+    "id": 15,
+    "name": "Lasse Petersen",
+    "role": "Abteilungsmitglied",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "lasse-petersen.jpg",
+    "description": "Olivia provides support to our customers, addressing their concerns and helping them with product-related issues."
+  },
+  {
+    "id": 16,
+    "name": "Timon Dümmler",
+    "role": "Abteilungsmitglied",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "timon-duemmler.jpg",
+    "description": "Paul manages our cloud infrastructure, optimizing performance and ensuring reliable services."
+  },
+  {
+    "id": 17,
+    "name": "Walther Lige",
+    "role": "Abteilungsmitglied",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "walther-lige.jpg",
+    "description": "Quinn administers our databases, ensuring data integrity and performance."
+  },
+  {
+    "id": 18,
+    "name": "Emil Gallmeister",
+    "role": "Abteilungsmitglied",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "emil-gallmeister.jpg",
+    "description": "Rita defines the product vision and roadmap, working closely with stakeholders to align product goals."
+  },
+  {
+    "id": 19,
+    "name": "Tobias Krägenbink",
+    "role": "Abteilungsmitglied",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "tobias-kraegenbink.jpg",
+    "description": "Simon handles the integration of various systems and services, ensuring seamless connectivity and data flow."
+  },
+  {
+    "id": 20,
+    "name": "Colin Thomas",
+    "role": "Abteilungsmitglied",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "",
+    "description": "Tina conducts research to drive innovation and explore new technologies for our projects."
+  },
+  {
+    "id": 21,
+    "name": "Vidya Shanmugam",
+    "role": "Abteilungsmitglied",
+    "tags": ["Simulation a. System Desing", "Master"],
+    "image": "",
+    "description": "Tina conducts research to drive innovation and explore new technologies for our projects."
+  },
+  {
+    "id": 22,
+    "name": "Sven Heinrich",
+    "role": "Abteilungsleiter",
+    "tags": ["Wirtschaftsingenieurwesen", "Bachelor"],
+    "image": "sven-heinrich.jpg",
+    "description": "Tina conducts research to drive innovation and explore new technologies for our projects."
+  },
+  {
+    "id": 23,
+    "name": "Lena Teubner",
+    "role": "Abteilungsmitglied",
+    "tags": ["Maschinenbau", "Bachelor"],
+    "image": "lena-teubner.jpg",
+    "description": "Tina conducts research to drive innovation and explore new technologies for our projects."
+  },
+  {
+    "id": 24,
+    "name": "Marie Weihmann",
+    "role": "Abteilungsmitglied",
+    "tags": ["Betriebswirtschaftslehre", "Bachelor"],
+    "image": "",
+    "description": "Tina conducts research to drive innovation and explore new technologies for our projects."
+  }
+]

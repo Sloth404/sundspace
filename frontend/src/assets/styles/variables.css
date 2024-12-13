@@ -1,0 +1,15 @@
+:root {
+    --primary-color: #0b0C10;
+    --secondary-color: #6c33ff;
+    --tertiary-color: #a65cff;
+    --text-color: #fafafa;
+    --background-color: #1a1a1d;
+    --font-family: 'Roboto', sans-serif;
+    --font-size-base: 16px;
+    --padding-base: 20px;
+    --glossy-effect: rgba(250, 250, 250, 0.25);
+    --red-hst: #F80B29;
+    --violet-hst: #B83FCA;
+    --blue-hst: #0286de;
+}
+
