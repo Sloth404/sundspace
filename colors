@@ -1,0 +1,13 @@
+Variante #1
+--primary-color: #0b0C10;
+--secondary-color: #6c33ff;
+--tertiary-color: #a65cff;
+--text-color: #fafafa;
+--background-color: #1a1a1d;
+
+Variante #2
+--primary-color: #201F24;
+    --secondary-color: #4176FC;
+    --tertiary-color: #293854;
+    --text-color: #fafafa;
+    --background-color: #1a1a1d;
