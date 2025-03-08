@@ -4,7 +4,10 @@
       <!-- Splash screen section that includes Hyperdrive and Counter components -->
       <div class="splash-screen">
         <Hyperdrive></Hyperdrive>
-        <Counter />
+        <div class="logo-counter">
+          <img src="src/assets/pics/logo_schwarz.png">
+          <Counter />
+        </div>
         <!-- Render the Counter component -->
       </div>
       <!-- Feed container displaying a list of FeedItem components -->
@@ -105,6 +108,33 @@ onMounted(async () => {
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
   height: 100px; /* Fixed height */
+}
+
+.logo-counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo-counter img {
+  max-height: 20rem;
+  max-width: 20rem;
+  margin-bottom: -3rem;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
 /* Styling for the rocket element that stays fixed in the viewport */
