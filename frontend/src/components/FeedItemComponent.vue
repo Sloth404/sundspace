@@ -157,7 +157,7 @@ img {
 
 /* Paragraph styling inside the card */
 .card p {
-  margin-bottom: 30px; /* Bottom margin for spacing */
+  margin-bottom: 2rem; /* Bottom margin for spacing */
 }
 
 /* Color classes for alternating card colors */
