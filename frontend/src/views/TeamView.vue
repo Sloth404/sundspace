@@ -14,7 +14,7 @@
     </p>
   </div>
 
-  <h2>Unsere Team Mitglieder</h2>
+  <h2>Unsere Abteilungsleiter</h2>
 
   <div class="team-view">
 

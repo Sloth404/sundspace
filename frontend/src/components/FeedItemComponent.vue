@@ -130,7 +130,8 @@ img {
   margin-top: -2.5rem; /* Negative top margin for overlapping effect */
   z-index: 999; /* High z-index to bring above other content */
   overflow: hidden; /* Ensures content does not overflow the card bounds */
-  background-color: var(--glossy-effect);
+  //background-color: var(--glossy-effect);
+  background: linear-gradient(to bottom, var(--tertiary-color), #000000);
   backdrop-filter: blur(10px);
   transition: height 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth height transition */
 }

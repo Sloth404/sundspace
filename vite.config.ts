@@ -29,4 +29,8 @@ export default defineConfig({
       provider: 'v8',
     },
   },
+
+  build: {
+    outDir: 'dist'
+  }
 });

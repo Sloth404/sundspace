@@ -7,6 +7,14 @@
     <!-- Wrapper for the main content, which includes the ContactComponent -->
     <div class="content-wrapper">
       <ContactComponent />
+      <div class="footer">
+        <a
+          class="insta-button"
+          href="/"
+        >
+          ZURÜCK ZUR HOMEPAGE
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -84,4 +92,50 @@ export default {
   position: relative; /* Relative positioning within the container */
   top: 20rem; /* Space from the top, positioning content below the splash screen */
 }
+
+.insta-button {
+  position: relative;
+  overflow: hidden; /* Verhindert das Überlaufen des Pseudo-Elements */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tertiary-color); /* Standard-Hintergrund */
+  border: none;
+  border-radius: 20px;
+  width: 300px;
+  height: 50px;
+  color: var(--text-color);
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Sanfte Farbänderung für den Text */
+  z-index: 1;
+}
+
+/* Pseudo-Element für den animierten Farbverlauf */
+.insta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, var(--orange), black); /* Verlauf von unten nach oben */
+  transform: translateY(100%); /* Startet außerhalb des Buttons (unten) */
+  transition: transform 0.5s ease-in-out; /* Weiche Animation */
+  z-index: -1; /* Hinter dem Button-Text */
+}
+
+/* Hover: Farbverlauf bewegt sich von unten nach oben */
+.insta-button:hover::before {
+  transform: translateY(0);
+}
+
+.footer {
+  display: flex; /* Flexbox aktivieren */
+  justify-content: center; /* Horizontal zentrieren */
+  align-items: center; /* Vertikal zentrieren */
+  width: 100%; /* Volle Breite */
+  margin-top: 5rem; /* Abstand nach oben anpassen */
+}
+
 </style>

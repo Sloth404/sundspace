@@ -82,7 +82,7 @@ export default {
   border-radius: 25px; /* Rounded corners */
   padding: 10px; /* Padding inside the card */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow effect */
-  background-color: var(--glossy-effect); /* Background color of the card */
+  background: linear-gradient(to bottom, var(--tertiary-color), #000000); /* Lila nach Schwarz
   transition: transform 0.3s; /* Smooth transform effect on hover */
   max-width: 275px; /* Maximum width of the card */
 }

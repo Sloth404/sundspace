@@ -19,11 +19,11 @@
       <RouterLink to="/wettbewerb" active-class="router-link-active">
         Wettbewerb
       </RouterLink>
-      <RouterLink to="/kontakt" active-class="router-link-active">
-        Kontakt
-      </RouterLink>
       <RouterLink to="/sponsoring" active-class="router-link-active">
         Sponsoring
+      </RouterLink>
+      <RouterLink to="/kontakt" active-class="router-link-active">
+        Kontakt
       </RouterLink>
       <!-- Dot element for highlighting navigation items -->
       <div ref="dot" class="dot"></div>

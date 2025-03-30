@@ -150,25 +150,40 @@ onMounted(async () => {
   top: 20px; /* Offset from the top of the viewport */
 }
 
-/* Styling for the Instagram button */
 .insta-button {
-  display: inline-flex; /* Flexbox layout for alignment */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  background-color: var(--tertiary-color); /* Background color */
-  border: none; /* Remove border */
-  border-radius: 20px; /* Rounded corners */
-  width: 300px; /* Fixed width */
-  height: 50px; /* Fixed height */
-  color: var(--text-color); /* Text color */
-  font-size: 16px; /* Font size */
-  text-decoration: none; /* Remove underline */
-  transition: backgroundr 1s ease-in-out; /* Smooth transition for background color change */
+  position: relative;
+  overflow: hidden; /* Verhindert das Überlaufen des Pseudo-Elements */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tertiary-color); /* Standard-Hintergrund */
+  border: none;
+  border-radius: 20px;
+  width: 300px;
+  height: 50px;
+  color: var(--text-color);
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Sanfte Farbänderung für den Text */
+  z-index: 1;
 }
 
-/* Hover effect for the Instagram button */
-.insta-button:hover {
-  /* background: linear-gradient(45deg, var(--tertiary-color), var(--secondary-color));*/ /* Change background color on hover */
-  background: linear-gradient(to right, var(--red-hst), var(--violet-hst), var(--blue-hst));
+/* Pseudo-Element für den animierten Farbverlauf */
+.insta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, var(--orange), black); /* Verlauf von unten nach oben */
+  transform: translateY(100%); /* Startet außerhalb des Buttons (unten) */
+  transition: transform 0.5s ease-in-out; /* Weiche Animation */
+  z-index: -1; /* Hinter dem Button-Text */
+}
+
+/* Hover: Farbverlauf bewegt sich von unten nach oben */
+.insta-button:hover::before {
+  transform: translateY(0);
 }
 </style>
