@@ -6,13 +6,13 @@
 
 version: 2
 updates:
-  # Enable version updates for npm Update Monthly
+  # Enable version updates for npm Update Weekly
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
       # Check for npm updates on Saturday 2am
-      day: "Saturday"
+      day: "saturday"
       time: "02:00"
       timezone: "Europe/Berlin"
     open-pull-requests-limit: 3
