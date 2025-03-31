@@ -132,7 +132,7 @@ export default {
   text-align: center;
   padding: 20px;
   border-radius: 20px;
-  background-color: var(--glossy-effect);
+  background: linear-gradient(to bottom, var(--tertiary-color), #000000);
   color: var(--text-color);
   transition: transform 0.3s ease;
   height: 400px;

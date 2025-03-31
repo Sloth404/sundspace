@@ -14,6 +14,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
+      crypto: 'crypto-browserify',
     },
   },
   assetsInclude: ['**/*.obj'],
@@ -27,6 +28,18 @@ export default defineConfig({
     coverage: {
       reportsDirectory: './coverage/sundspace-website',
       provider: 'v8',
+    },
+  },
+
+  build: {
+    outDir: 'dist'
+  },
+
+  optimizeDeps: {
+    esbuildOptions: {
+      define: {
+        global: 'window',  // This is important to handle global references in some libraries
+      },
     },
   },
 });

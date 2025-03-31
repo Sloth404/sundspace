@@ -2,8 +2,11 @@
   <!-- Main container for the feed item, dynamically setting classes and styles based on props -->
   <div :class="['feed-item', `feed-${index + 1}`]" :style="expandedStyle">
     <div class="image-container">
-      <!-- Image for the feed item with dynamic source and alt text -->
-      <img :src="getImagePath(feed.image)" :alt="`Feed ${index + 1}`" />
+      <img v-if="feed.media_type === 'IMAGE'" :src="feed.media_url" :alt="feed.caption" />
+      <video v-if="feed.media_type === 'VIDEO'" :src="feed.media_url" :alt="feed.caption" />
+      <div v-if="feed.media_type === 'CAROUSEL_ALBUM'">
+        <img v-for="(item, i) in feed.children" :key="i" :src="item.media_url" :alt="item.caption" />
+      </div>
     </div>
     <div
       :class="['card', cardColor, localIsExpanded ? 'expanded' : '']"
@@ -12,8 +15,8 @@
     >
       <!-- Text content of the feed, truncated if not expanded -->
       <p>
-        {{ localIsExpanded ? feed.text : feed.text.slice(0, 300) }}
-        <span v-if="!localIsExpanded && feed.text.length > 300">...</span>
+        {{ localIsExpanded ? feed.caption : feed.caption.slice(0, 300) }}
+        <span v-if="!localIsExpanded && feed.caption.length > 300">...</span>
       </p>
       <!-- Button to toggle expanded state if the text length exceeds 300 characters -->
       <button
@@ -130,8 +133,7 @@ img {
   margin-top: -2.5rem; /* Negative top margin for overlapping effect */
   z-index: 999; /* High z-index to bring above other content */
   overflow: hidden; /* Ensures content does not overflow the card bounds */
-  //background-color: var(--glossy-effect);
-  background: linear-gradient(to bottom, var(--tertiary-color), #000000);
+  background-color: var(--glossy-effect);
   backdrop-filter: blur(10px);
   transition: height 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth height transition */
 }
@@ -157,7 +159,7 @@ img {
 
 /* Paragraph styling inside the card */
 .card p {
-  margin-bottom: 2rem; /* Bottom margin for spacing */
+  margin-bottom: 30px; /* Bottom margin for spacing */
 }
 
 /* Color classes for alternating card colors */

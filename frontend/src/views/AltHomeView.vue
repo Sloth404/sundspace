@@ -4,10 +4,7 @@
       <!-- Splash screen section that includes Hyperdrive and Counter components -->
       <div class="splash-screen">
         <Hyperdrive></Hyperdrive>
-        <div class="logo-counter">
-          <img src="src/assets/pics/logo_schwarz.png">
-          <Counter />
-        </div>
+        <Counter />
         <!-- Render the Counter component -->
       </div>
       <!-- Feed container displaying a list of FeedItem components -->
@@ -53,6 +50,18 @@ const feeds = ref(feedData); // Feed items data
 const isExpanded = ref(new Array(feeds.value.length).fill(false)); // Track expanded state of feed items
 const rocketLoaded = ref(false); // Track Rocket component's load state
 
+const fetchInstagramPosts = async () => {
+  try {
+    const response = await fetch(
+      `https://graph.instagra,.com/me/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url&limit=5&access_token=`
+    );
+    const data = await response.json();
+    feeds.value = data.data;
+  } catch (error) {
+    console.error("Error fetching Instagram posts:", error);
+  }
+};
+
 // Function to get the path of images dynamically
 const getImagePath = (imageName: string) => {
   return new URL(`../../../src/assets/pics/${imageName}`, import.meta.url).href;
@@ -65,6 +74,7 @@ const toggleExpand = (index: number) => {
 
 // Reload the Rocket component after other components are loaded
 onMounted(async () => {
+  await fetchInstagramPosts();
   // Wait for all other components and DOM to finish rendering
   await nextTick();
 
@@ -110,33 +120,6 @@ onMounted(async () => {
   height: 100px; /* Fixed height */
 }
 
-.logo-counter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.logo-counter img {
-  max-height: 20rem;
-  max-width: 20rem;
-  margin-bottom: -3rem;
-  opacity: 0;
-  transform: scale(0.9);
-  animation: fadeIn 1.5s ease-out forwards;
-}
-
 /* Styling for the rocket element that stays fixed in the viewport */
 .rocket-element {
   grid-column: 3; /* Position in the third column */
@@ -150,40 +133,25 @@ onMounted(async () => {
   top: 20px; /* Offset from the top of the viewport */
 }
 
+/* Styling for the Instagram button */
 .insta-button {
-  position: relative;
-  overflow: hidden; /* Verhindert das Überlaufen des Pseudo-Elements */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--tertiary-color); /* Standard-Hintergrund */
-  border: none;
-  border-radius: 20px;
-  width: 300px;
-  height: 50px;
-  color: var(--text-color);
-  font-size: 16px;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out; /* Sanfte Farbänderung für den Text */
-  z-index: 1;
+  display: inline-flex; /* Flexbox layout for alignment */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  background-color: var(--tertiary-color); /* Background color */
+  border: none; /* Remove border */
+  border-radius: 20px; /* Rounded corners */
+  width: 300px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  color: var(--text-color); /* Text color */
+  font-size: 16px; /* Font size */
+  text-decoration: none; /* Remove underline */
+  transition: backgroundr 1s ease-in-out; /* Smooth transition for background color change */
 }
 
-/* Pseudo-Element für den animierten Farbverlauf */
-.insta-button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, var(--orange), black); /* Verlauf von unten nach oben */
-  transform: translateY(100%); /* Startet außerhalb des Buttons (unten) */
-  transition: transform 0.5s ease-in-out; /* Weiche Animation */
-  z-index: -1; /* Hinter dem Button-Text */
-}
-
-/* Hover: Farbverlauf bewegt sich von unten nach oben */
-.insta-button:hover::before {
-  transform: translateY(0);
+/* Hover effect for the Instagram button */
+.insta-button:hover {
+  /* background: linear-gradient(45deg, var(--tertiary-color), var(--secondary-color));*/ /* Change background color on hover */
+  background: linear-gradient(to right, var(--red-hst), var(--violet-hst), var(--blue-hst));
 }
 </style>
