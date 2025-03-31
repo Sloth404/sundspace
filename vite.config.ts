@@ -14,6 +14,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
+      crypto: 'crypto-browserify',
     },
   },
   assetsInclude: ['**/*.obj'],
@@ -32,5 +33,13 @@ export default defineConfig({
 
   build: {
     outDir: 'dist'
-  }
+  },
+
+  optimizeDeps: {
+    esbuildOptions: {
+      define: {
+        global: 'window',  // This is important to handle global references in some libraries
+      },
+    },
+  },
 });
